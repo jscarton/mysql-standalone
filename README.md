@@ -39,4 +39,9 @@ mysql> update mysql.user set host = ‘%’ where user=’root’;
 Query OK, 1 row affected (0.02 sec)
 ```
 
-restart your container and you should be able to connect to your local MYSQL Service from outside of docker
+and then flush the privileges
+```
+mysql> FLUSH PRIVILEGES;
+```
+
+ now, you should be able to connect to your local MYSQL Service from outside of docker container
